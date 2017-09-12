@@ -117,7 +117,7 @@ j=0;
 		else
 		{	
 			for(i=index;i>students.length;i++){
-			students[i]=null;
+				students[i]=null;
 			}
 		}
 	}
@@ -136,6 +136,19 @@ j=0;
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
+		if(index < 0 || index >= students.length)
+			throw new IllegalArgumentException();
+		else
+		{	
+			for(i=0;i<index;i++)
+			{
+				students[i]=students[i+index];
+			}
+			for(i=index;i<students.length;i++)
+			{
+				students[i]=null;
+			}			
+		}
 	}
 
 	@Override
