@@ -194,15 +194,16 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if (date == null)
 	 		throw new IllegalArgumentException();
-		else {j=0;
+		else {
+			j=0;
 			Student[] s=this.students;
 			for(i=0;i<this.students.length;i++)
 			{
 			if(this.students[i].getBirthDate().equals(date))
-				s[j]=this.students[i];
+				{s[j]=this.students[i];j++;}
 			}
-	return s;
-}
+			return s;
+		}
 	}
 
 	@Override
