@@ -237,7 +237,7 @@ j=0;
 		for(i=0;i<students.length;i++)
 			if(students[i]==student)
 				break;
-		return students[i];	
+		return students[i+1];	
 	}
 
 }
