@@ -15,9 +15,8 @@ import java.util.Arrays;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	//Student[] stu = students.clone();
 	int i=0,j=0;
-double stu[];
+	double mam[];
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -195,13 +194,21 @@ double stu[];
 		// Add your implementation here
 		if (date == null)
 	 		throw new IllegalArgumentException();
-		else 
-			return students;
+		else {j=0;
+			Student[] s=this.students;
+			for(i=0;i<this.students.length;i++)
+			{
+			if(this.students[i].getBirthDate().equals(date))
+				s[j]=this.students[i];
+			}
+	return s;
+}
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
+		
 		return null;
 	}
 
@@ -230,6 +237,7 @@ double stu[];
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here\
+		
 		return null;
 	}
 
