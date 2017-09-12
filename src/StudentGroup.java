@@ -236,8 +236,7 @@ j=0;
 		// Add your implementation here
 		for(i=0;i<students.length;i++)
 			if(students[i]==student)
-				break;
-		return students[i+1];	
+				return students[i+1];	
 	}
 
 }
