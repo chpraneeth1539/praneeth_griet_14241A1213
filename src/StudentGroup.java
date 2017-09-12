@@ -212,8 +212,17 @@ Student[] s=this.students;
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
-		if( firstDate== null || lastDate== null)
+		//Student[] s=students;int x=0;
+		if (firstDate == null || lastDate == null)
 	 		throw new IllegalArgumentException();
+		//else {
+		
+		//	for(i=0;i<students.length;i++)
+		//	{if((students[i].getBirthDate().equals(firstDate)) &&  (students[i].getBirthDate() < lastDate))
+		//		{s[x]=this.students[i];
+		//			x++;}
+		//	}
+			
 		return null;
 	}
 
@@ -234,9 +243,9 @@ Student[] s=this.students;
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		//for(i=0;i<students.length;i++)
+		
 		{
-			//if(students[i].BirthDate == age)
+			
 				return null;
 		}
 	}
@@ -253,7 +262,7 @@ Student[] s=this.students;
 		k=students.length;
 		for(i=0;i<students.length;i++)
 			if(students[i].getAvgMark()==mam[j])		
-				{s1[n]=students[i];}
+				{s1[n]=students[i];n++;}
 		return s1;
 	}
 
