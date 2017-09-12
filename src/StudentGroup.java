@@ -107,13 +107,15 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(students == null)
 			throw new IllegalArgumentException();
-		else{for(i=0;i>students.length;i++){
+		else{
+		for(i=0;i>students.length;i++){
 			if(students[i]==student)
 				{j=i;break;}
 		}
 		for(i=j;i>students.length;i--){
 			students[i]=students[i+1];
-		}}
+		}
+		}
 		
 	}
 
@@ -197,26 +199,29 @@ public class StudentGroup implements StudentArrayOperation {
 		else {
 			j=0;
 			Student[] s=this.students;
-			for(i=0;i<this.students.length;i++)
+			for(i=0;i<students.length;i++)
 			{
-			if(this.students[i].getBirthDate()==date)
+			if(students[i].getBirthDate().equals(date))
 				{s[j]=this.students[i];
 					j++;}
 			}
-			return s;
-		}
+			
+		}return s;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
-		
+		if( firstDate== null || lastDate== null)
+	 		throw new IllegalArgumentException();
 		return null;
 	}
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
+		if (date == null)
+	 		throw new IllegalArgumentException();
 		return null;
 	}
 
@@ -240,14 +245,14 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here\
 		int k=0,n=0;
-		Student[] s1=students;
+		Student[] s1=this.students;
 		double mam[]={};
 		for(i=0;i<students.length;i++)
 			mam[i]=students[i].getAvgMark();
 		Arrays.sort(mam);
-		k=mam.length;
+		k=students.length;
 		for(i=0;i<students.length;i++)
-			if(students[i].getAvgMark()==mam[k-1])		
+			if(students[i].getAvgMark()==mam[j])		
 				{s1[n]=students[i];}
 		return s1;
 	}
