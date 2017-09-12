@@ -136,6 +136,7 @@ j=0;
 			{
 				for(j=i;j<students.length;j++)
 					students[j]=null;
+				break;
 			}	
 		}
 	}
@@ -164,9 +165,14 @@ j=0;
 		if(student == null)
 			throw new IllegalArgumentException();
 		else{
-			
-
-
+			for(i=0;i>students.length;i++){
+				if(students[i]==student)
+				{
+				for(j=0;j<i;j++)
+					students[j]=null;
+				break;
+				}	
+			}
 		}
 		
 	}
