@@ -1,5 +1,6 @@
 import java.util.Date;
-
+import java.io.*;
+import java.util.Arrays;
 /**
  * A fix-sized array of students
  * array length should always be equal to the number of stored elements
@@ -14,7 +15,9 @@ import java.util.Date;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
+	//Student[] stu = students.clone();
 	int i=0,j=0;
+double stu[];
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -182,12 +185,16 @@ j=0;
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
+		
 	}
 
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
-		return null;
+		if (date == null)
+	 		throw new IllegalArgumentException();
+		else 
+			return students;
 	}
 
 	@Override
@@ -211,18 +218,26 @@ j=0;
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		return null;
+		//for(i=0;i<students.length;i++)
+		{
+			//if(students[i].BirthDate == age)
+				return null;
+		}
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
-		// Add your implementation here
+		// Add your implementation here\
 		return null;
 	}
 
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		return null;
+		for(i=0;i<students.length;i++)
+			if(students[i]==student)
+				break;
+		return students[i];	
 	}
+
 }
