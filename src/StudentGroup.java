@@ -239,7 +239,8 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here\
-int k=0;
+		int k=0,n=0;
+		Student[] s1=this.students;
 		double mam[]={};
 		for(i=0;i<students.length;i++)
 			mam[i]=students[i].getAvgMark();
@@ -247,7 +248,7 @@ int k=0;
 		k=mam.length;
 		for(i=0;i<students.length;i++)
 			if(students[i].getAvgMark()==mam[k])		
-				return students;
+				{s1[n]=students[i];n++;}
 		return null;
 	}
 
