@@ -32,8 +32,8 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-			if(students == NULL )
-				throw new IllegalArgumentException;
+			if(students == null )
+				throw new IllegalArgumentException();
 			else 
 				this.students=students;
 	}
@@ -41,7 +41,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student getStudent(int index) {
 		// Add your implementation here
 		if(index < 0 || index >= students.length)
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		else
 			return students[index];
 	}
@@ -49,8 +49,8 @@ public class StudentGroup implements StudentArrayOperation {
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
 	
-		if(students == NULL  || index < 0 || index >= students.length)
-			throw new IllegalArgumentException;
+		if(students == null || index < 0 || index >= students.length)
+			throw new IllegalArgumentException();
 		else{ 
 			students[index]=student;
 		}		
@@ -58,37 +58,39 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here	
-		for(i=students.length;i>0.length;i--){
+		for(i=students.length;i>0;i--){
 			students[i+1]=students[i];
 		}
-		stdents[0]=student;	
+		students[0]=student;	
 	}
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
-		if(students == NULL  || index < 0 || index >= students.length)
-			throw new IllegalArgumentException;
+		if(students == null)
+			throw new IllegalArgumentException();
 		else{ 
-			students[]+=student;
+			j=students.length+1;
+			students[j]=student;
 		}
+j=0;
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
 		if(index < 0 || index >= students.length)
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		for(i=students.length;i>index;i--){
 			students[i+1]=students[i];
 		}
-		stdents[index]=student;
+		students[index]=student;
 	}
 
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
 		if(index < 0 || index >= students.length)
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		for(i=index;i>students.length;i++){
 			students[i]=students[i+1];
 		}
@@ -111,11 +113,11 @@ public class StudentGroup implements StudentArrayOperation {
 	public void removeFromIndex(int index) {
 		// Add your implementation here
 		if(index < 0 || index >= students.length)
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		else
 		{	
 			for(i=index;i>students.length;i++){
-			students[i]=NULL;
+			students[i]=null;
 			}
 		}
 	}
@@ -123,11 +125,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
-		if(student == NULL)
-			throw new IllegalArgumentException;
+		if(student == null)
+			throw new IllegalArgumentException();
 		for(i=0;i>students.length;i++){
 			if(students[i]==student)
-				
+			{}	
 		}
 	}
 
