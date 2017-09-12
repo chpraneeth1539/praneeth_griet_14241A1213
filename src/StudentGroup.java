@@ -79,7 +79,7 @@ double stu[];
 			j=students.length;
 			students[j]=student;
 		}
-j=0;
+		j=0;
 	}
 
 	@Override
@@ -87,9 +87,9 @@ j=0;
 		// Add your implementation here
 		if(index < 0 || index >= students.length)
 			throw new IllegalArgumentException();
-		for(i=students.length;i>index;i--){
+		else{for(i=students.length;i>index;i--){
 			students[i+1]=students[i];
-		}
+		}}
 		students[index]=student;
 	}
 
@@ -98,21 +98,23 @@ j=0;
 		// Add your implementation here
 		if(index < 0 || index >= students.length)
 			throw new IllegalArgumentException();
-		for(i=index;i>students.length;i++){
+		else{for(i=index;i>students.length;i++){
 			students[i]=students[i+1];
-		}
+		}}
 	}
 
 	@Override
 	public void remove(Student student) {
 		// Add your implementation here
-		for(i=0;i>students.length;i++){
+		if(students == null)
+			throw new IllegalArgumentException();
+		else{for(i=0;i>students.length;i++){
 			if(students[i]==student)
 				{j=i;break;}
 		}
 		for(i=j;i>students.length;i--){
 			students[i]=students[i+1];
-		}
+		}}
 		
 	}
 
