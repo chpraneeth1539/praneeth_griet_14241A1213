@@ -199,7 +199,7 @@ public class StudentGroup implements StudentArrayOperation {
 			Student[] s=this.students;
 			for(i=0;i<this.students.length;i++)
 			{
-			if(this.students[i].getBirthDate().equals(date))
+			if(this.students[i].getBirthDate()==date)
 				{s[j]=this.students[i];j++;}
 			}
 			return s;
