@@ -234,10 +234,14 @@ j=0;
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
+		if (student== null)
+	 		throw new IllegalArgumentException();
 		for(i=0;i<students.length;i++)
+		{	
 			if(students[i]==student)
 				return students[i+1];
-return null;	
+		}
+		return null;	
 	}
 
 }
