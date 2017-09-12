@@ -249,7 +249,7 @@ public class StudentGroup implements StudentArrayOperation {
 		for(i=0;i<students.length;i++)
 			if(students[i].getAvgMark()==mam[k])		
 				{s1[n]=students[i];n++;}
-		return null;
+		return s1;
 	}
 
 	@Override
