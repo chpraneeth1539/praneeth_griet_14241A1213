@@ -165,13 +165,15 @@ j=0;
 		if(student == null)
 			throw new IllegalArgumentException();
 		else{
-			for(i=0;i>students.length;i++){
+			for(i=0;i>students.length;i++)
+			{
 				if(students[i]==student)
-				{
-				for(j=0;j<i;j++)
-					students[j]=null;
-				break;
-				}	
+					break;	
+				
+			}
+			for(j=0;j<i;j++){
+				students[j]=students[i];
+				i++;
 			}
 		}
 		
