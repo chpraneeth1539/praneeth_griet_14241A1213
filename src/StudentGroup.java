@@ -58,8 +58,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here	
-		for(i=students.length;i>0;i--){
-			students[i+1]=students[i];
+		if(students == null )
+				throw new IllegalArgumentException();
+		else{
+			for(i=students.length;i>0;i--){
+				students[i+1]=students[i];
+			}
 		}
 		students[0]=student;	
 	}
@@ -129,7 +133,10 @@ j=0;
 			throw new IllegalArgumentException();
 		for(i=0;i>students.length;i++){
 			if(students[i]==student)
-			{}	
+			{
+				for(j=i;j<students.length;j++)
+					students[j]=null;
+			}	
 		}
 	}
 
@@ -154,6 +161,14 @@ j=0;
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+		if(student == null)
+			throw new IllegalArgumentException();
+		else{
+			
+
+
+		}
+		
 	}
 
 	@Override
